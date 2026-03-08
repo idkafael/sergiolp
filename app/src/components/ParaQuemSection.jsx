@@ -86,7 +86,7 @@ export function ParaQuemSection() {
             <span className="gradient-text-gold">PGL: Processo de Geração de Lucro</span>
           </p>
           <p className="text-muted text-sm md:text-base text-center mt-2 font-medium">
-            Um sistema que organiza o negócio do vidraceiro ou do serralheiro em três dimensões:
+            Um sistema que organiza uma vidraçaria em três dimensões:
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">

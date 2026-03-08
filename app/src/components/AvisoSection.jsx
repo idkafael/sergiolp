@@ -16,7 +16,7 @@ export function AvisoSection() {
           Aviso <span className="underline-gold"><span className="gradient-text-gold">importante</span></span>
         </h2>
         <p className="text-muted text-base md:text-lg text-center mb-8 font-medium">
-          Esse evento não é para qualquer vidraceiro ou serralheiro.
+          Esse evento não é para qualquer vidraceiro.
         </p>
         <p className="text-white text-base md:text-lg text-center mb-6 font-semibold">
           É para quem quer:

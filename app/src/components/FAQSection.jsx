@@ -1,25 +1,12 @@
 import { useState } from 'react'
 
 const faqs = [
-  {
-    q: 'O que é o Esquadria Milionária?',
-    a: 'O Esquadria Milionária é uma mentoria completa para donos de esquadrias, serralheiros e vidraceiros que desejam escalar seus negócios e multiplicar o faturamento.',
-  },
-  {
-    q: 'Para quem é essa mentoria?',
-    a: 'Para donos de esquadrias, serralheiros e vidraceiros que querem sair do operacional, empresários do setor estagnados que precisam dar o próximo passo, e quem deseja multiplicar o faturamento.',
-  },
-  {
-    q: 'Sou serralheiro ou vidraceiro. A mentoria serve para o meu negócio?',
-    a: 'Sim. A mentoria é voltada para o mercado de esquadrias, alumínio e vidros — incluindo serralheiros e vidraceiros que trabalham com portas, janelas, fachadas e estruturas metálicas. Os métodos de gestão, vendas e operação se aplicam ao seu dia a dia.',
-  },
-  {
-    q: 'Quanto tempo dura o acesso?',
-    a: 'O acesso à mentoria é completo e você pode assistir no seu ritmo. São 2 dias de imersão + todo o material de apoio.',
-  },
+  { q: 'O que é o Esquadria Milionária?', a: 'O Esquadria Milionária é uma mentoria completa para donos de esquadrias que desejam escalar seus negócios e multiplicar o faturamento.' },
+  { q: 'Para quem é essa mentoria?', a: 'Para donos de esquadrias que querem sair do operacional, empresários estagnados que precisam dar o próximo passo, e quem deseja multiplicar o faturamento.' },
+  { q: 'Quanto tempo dura o acesso?', a: 'O acesso à mentoria é completo e você pode assistir no seu ritmo. São 2 dias de imersão + todo o material de apoio.' },
   {
     q: 'Eu já tenho uma empresa, mas estou estagnado. Essa mentoria serve para mim?',
-    a: 'Sim! A mentoria foi desenvolvida especialmente para ajudar empresários do setor — donos de esquadrias, serralheiros e vidraceiros — que estão estagnados a quebrar barreiras e dar o próximo passo no crescimento.',
+    a: 'Sim! A mentoria foi desenvolvida especialmente para ajudar empresários que estão estagnados a quebrar barreiras e dar o próximo passo no crescimento.',
   },
 ]
 

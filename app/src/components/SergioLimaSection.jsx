@@ -38,7 +38,8 @@ export function SergioLimaSection() {
               <p>
                 Ao longo de sua trajetória, desenvolveu métodos exclusivos de gestão, vendas e
                 operação que já ajudaram{' '}
-                <span className="text-gold font-semibold">centenas de empresários do ramo</span> — vidraceiros e serralheiros — a multiplicarem seus faturamentos e construírem negócios sólidos e lucrativos.
+                <span className="text-gold font-semibold">centenas de empresários</span> do ramo a
+                multiplicarem seus faturamentos e construírem negócios sólidos e lucrativos.
               </p>
               <p>
                 Hoje, através da mentoria{' '}

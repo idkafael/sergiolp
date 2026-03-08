@@ -11,7 +11,8 @@ export function CTASection() {
           Comece agora a transformar <span className="gradient-text-gold">sua esquadria</span>
         </h2>
         <p className="text-muted text-sm md:text-base mb-10 max-w-xl mx-auto leading-relaxed">
-          Junte-se a centenas de empresários do setor — vidraceiros e serralheiros — que já estão faturando mais e construindo negócios sólidos com o método Esquadria Milionária.
+          Junte-se a centenas de empresários que já estão faturando mais e construindo negócios sólidos
+          com o método Esquadria Milionária.
         </p>
         <a
           href="#oferta"

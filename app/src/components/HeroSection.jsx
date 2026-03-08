@@ -37,7 +37,7 @@ export function HeroSection({ onSubmit }) {
               </h1>
               <div className="text-muted text-sm md:text-base mb-8 leading-relaxed max-w-lg space-y-4 font-medium">
                 <p>
-                  Existe um tipo de profissional no setor — você sendo vidraceiro ou serralheiro — que vive preso em um ciclo:
+                  Existe um tipo de vidraceiro que vive preso em um ciclo:
                 </p>
                 <ul className="space-y-4 pl-0 list-none">
                   {['Trabalha o dia inteiro na obra', 'Corre atrás de orçamento', 'Negocia preço com cliente', 'Resolve problema de equipe', 'E no final do mês… sobra pouco lucro.'].map((texto, index) => (
@@ -48,12 +48,12 @@ export function HeroSection({ onSubmit }) {
                   ))}
                 </ul>
                 <p>
-                  Esse é o <span className="text-white font-semibold">vidraceiro ou serralheiro travado</span>.
+                  Esse é o <span className="text-white font-semibold">vidraceiro travado</span>.
                 </p>
                 <p>
                   Mas existe outro tipo de profissional no mercado.
                   Um que construiu algo completamente diferente.
-                  Um <span className="gradient-text-gold font-semibold">Vidraceiro ou Serralheiro High Ticket</span>.
+                  Um <span className="gradient-text-gold font-semibold">vidraceiro High Ticket</span>.
                 </p>
               </div>
               <div className="flex flex-col gap-4 items-start w-full max-w-md">
@@ -112,7 +112,7 @@ export function HeroSection({ onSubmit }) {
             </div>
           </AnimatedCard>
           <div className="text-muted text-sm md:text-base mt-8 leading-relaxed max-w-md mx-auto space-y-4 font-medium">
-            <p>Existe um tipo de vidraceiro ou serralheiro que vive preso em um ciclo:</p>
+            <p>Existe um tipo de vidraceiro que vive preso em um ciclo:</p>
             <ul className="space-y-4 pl-0 list-none">
               {['Trabalha o dia inteiro na obra', 'Corre atrás de orçamento', 'Negocia preço com cliente', 'Resolve problema de equipe', 'E no final do mês… sobra pouco lucro.'].map((texto, index) => (
                 <li key={texto} className="flex gap-4 items-start">
@@ -124,7 +124,7 @@ export function HeroSection({ onSubmit }) {
             <p>
               Mas existe outro tipo de profissional no mercado.
               Um que construiu algo completamente diferente.
-              Um <span className="gradient-text-gold font-semibold">Vidraceiro ou Serralheiro High Ticket</span>.
+              Um <span className="gradient-text-gold font-semibold">vidraceiro High Ticket</span>.
             </p>
           </div>
         </div>

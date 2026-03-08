@@ -10,7 +10,7 @@ export function VideoSection() {
         </h2>
         <div className="text-muted text-base md:text-lg leading-relaxed space-y-6 font-medium">
           <p>
-            Durante anos, Sérgio Lima viveu a realidade que a maioria dos vidraceiros e serralheiros conhece bem.
+            Durante anos, Sérgio Lima viveu a realidade que a maioria dos vidraceiros conhece bem.
           </p>
           <ul className="space-y-5 pl-0 list-none">
             {['Uma vidraçaria pequena.', 'Apenas 40 metros quadrados de estrutura.', 'Equipe reduzida.', 'Obras pequenas.', 'Muito trabalho.', 'Pouco lucro.'].map((texto, index) => (
