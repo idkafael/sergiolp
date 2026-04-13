@@ -1,0 +1,99 @@
+LISTA DE LEADS (sem duplicados)
+================================
+
+EMAIL                                    | TELEFONE
+-----------------------------------------|------------------
+jailsonvidros57@gmail.com                | (11) 98508-3386
+josue@schneidersglass.com.br             | (43) 99861-3905
+j.g.vidros@hotmail.com                   | (81) 99809-2786
+celso_bett@hotmail.com                   | (67) 99863-6584
+teste123@gmail.com                       | (71) 98187-0535
+caioelias81@gmail.com                    | (71) 99915-5740
+fahensa10@hotmail.com                    | (71) 98806-5116
+montblancvidros@gmail.com                | (21) 98411-1460
+alufazpersianas@hotmail.com              | (71) 98138-1378
+rrvidro@hotmail.com                      | (55) 75998-6704
+joaopedro.almeidabahia@gmail.com         | (75) 98856-3249
+tomaz_rso@hotmail.com                    | (74) 99802-8257
+ramonsousa_jf@hotmail.com                | (32) 98865-3816
+antoniobarbosa17657@gmail.com            | (91) 99380-8894
+dantasjoaz@gmail.com                     | (71) 99999-7001
+souza.luandsantos@gmail.com              | (71) 98651-0425
+sofisticasadiemerson@gmail.com           | (93) 99152-0963
+vidracariadociso@hotmail.com             | (49) 99108-9208
+metroquadrado99@gmail.com                | (71) 99708-3513
+rooseane596@gmail.com                    | (87) 99912-9859
+gamamayaraaa@gmail.com                   | (11) 96170-6841
+teste@gmail.com                          | (11) 11111-1111
+victor_pires25@outlook.com               | (71) 98515-7420
+anagabrielle_desaj@hotmail.com           | (71) 98244-1004
+sheinegamah@gmail.com                    | (75) 99895-6403
+daniellopes08032002@gmail.com            | (71) 98707-1706
+wellingtonhlesquadrias@gmail.con         | (41) 99933-8249
+ellen@artcorrimaos.com.br                | (19) 99255-3174
+aaawda@gmail.com                         | (22) 22222-2122
+willsouzaguerra94@gmail.com              | (13) 98870-8261
+vidrosmundial3@gmail.com                 | (71) 98100-3807
+casadovidro.bruno@gmail.com              | (71) 99322-6302
+igorsn09@hotmail.com                     | (62) 99905-1304
+alumcity@hotmail.com                     | (85) 98562-6492
+eric99olmos@gmail.com                    | (21) 96402-9218
+eduardoforma20@gmail.com                 | (74) 99119-9621
+rafael19962100@gmail.com                 | (71) 98642-0139
+pedrinhovitor1304@gmail.com              | (79) 99984-9757
+afcruz98@gmail.com                       | (71) 99320-3401
+rafaelaluminetech@gmail.com              | (85) 99977-7712
+icaroandradeboulhosa@gmail.com           | (71) 98554-8853
+limn.interiores@gmail.com                | (71) 99725-8030
+limacarina715@gmail.com                  | (71) 99270-8432
+guiaraujopg@hotmail.com                  | (13) 97403-9399
+ronaldo1516pinheiro@gmail.com            | (85) 98532-0557
+jaldecicouto457@gmail.com                | (71) 99695-4637
+lumaxserralheria@gmail.com               | (11) 94760-2240
+cleober10@hotmail.com                    | (51) 98126-7424
+marivaldoaugusto4.5@gmail.com            | (82) 98863-1007
+temper4560@gmail.com                     | (55) 21996-7391
+joseeduardo@jmacabamentos.com.br         | (45) 99952-0164
+bsportoes@gmail.com                      | (71) 99215-2228
+tudoeeu@gmail.com                        | (75) 98843-4785
+minnaesquadrias@gmail.com                | (71) 99959-3001
+vidro.com2@hotmail.com                   | (75) 98181-5932
+vidracariapontocerto@hotmail.com         | (55) 75988-4346
+serralheria.arte.moderna@hotmail.com     | (21) 99155-8763
+tarcisofusion@hotmail.com                | (79) 99847-4747
+scardoso1507@hotmail.com                 | (75) 99712-8263
+rubensjunior_tp@hotmail.com              | (87) 99818-7016
+jgvidrosealuminio@gmail.com              | (79) 99856-2836
+cristhaisvidros@gmail.com                | (85) 98545-3480
+danielcordelier@hotmail.com              | (21) 97274-4301
+
+Total: 62 leads únicos
+
+
+========================================
+NOVOS LEADS (nesta atualização)
+========================================
+
+EMAIL                                    | TELEFONE
+-----------------------------------------|------------------
+ronaldo1516pinheiro@gmail.com            | (85) 98532-0557
+jaldecicouto457@gmail.com                | (71) 99695-4637
+lumaxserralheria@gmail.com               | (11) 94760-2240
+cleober10@hotmail.com                    | (51) 98126-7424
+marivaldoaugusto4.5@gmail.com            | (82) 98863-1007
+temper4560@gmail.com                     | (55) 21996-7391
+joseeduardo@jmacabamentos.com.br         | (45) 99952-0164
+bsportoes@gmail.com                      | (71) 99215-2228
+tudoeeu@gmail.com                        | (75) 98843-4785
+minnaesquadrias@gmail.com                | (71) 99959-3001
+vidro.com2@hotmail.com                   | (75) 98181-5932
+vidracariapontocerto@hotmail.com         | (55) 75988-4346
+serralheria.arte.moderna@hotmail.com     | (21) 99155-8763
+tarcisofusion@hotmail.com                | (79) 99847-4747
+scardoso1507@hotmail.com                 | (75) 99712-8263
+rubensjunior_tp@hotmail.com              | (87) 99818-7016
+jgvidrosealuminio@gmail.com              | (79) 99856-2836
+cristhaisvidros@gmail.com                | (85) 98545-3480
+danielcordelier@hotmail.com              | (21) 97274-4301
+
+Total: 19 leads novos

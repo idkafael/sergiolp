@@ -12,7 +12,7 @@ function formatTelefone(value) {
 export function LeadForm({ onSubmit, submitLabel = 'Quero participar do Evento Esquadria Milionária', idPrefix = '' }) {
   const [telefone, setTelefone] = useState('')
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState('idle') // 'idle' | 'loading' | 'success' | 'error'
+  const [status, setStatus] = useState('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
   function handleTelefoneChange(e) {
@@ -42,7 +42,7 @@ export function LeadForm({ onSubmit, submitLabel = 'Quero participar do Evento E
   const n = (id) => idPrefix ? `${idPrefix}-${id}` : id
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <input
           id={n('email')}
@@ -50,19 +50,14 @@ export function LeadForm({ onSubmit, submitLabel = 'Quero participar do Evento E
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          placeholder="Digite seu melhor e-mail:"
-          className="w-full px-4 py-3 text-sm rounded-lg bg-background border border-surface-light text-white placeholder:text-muted focus:outline-none focus:border-gold/50 transition-colors"
+          placeholder="Seu melhor e-mail"
+          className="w-full px-4 py-3.5 text-sm rounded-xl bg-background border border-surface-light text-white placeholder:text-muted/60 focus:outline-none focus:border-gold/50 hover:border-surface-light/80 transition-colors"
         />
       </div>
-      <div className="flex rounded-lg bg-background border border-surface-light overflow-hidden focus-within:border-gold/50 transition-colors">
-        <div className="flex items-center gap-1.5 pl-4 pr-2 text-muted shrink-0">
-          <span className="text-lg" aria-hidden>🇧🇷</span>
-          <span className="text-sm font-medium">+55</span>
-          <span className="text-muted/80" aria-hidden>
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </span>
+      <div className="flex rounded-xl bg-background border border-surface-light overflow-hidden focus-within:border-gold/50 hover:border-surface-light/80 transition-colors">
+        <div className="flex items-center gap-1.5 pl-4 pr-3 text-muted shrink-0 border-r border-surface-light">
+          <span className="text-base" aria-hidden>🇧🇷</span>
+          <span className="text-xs font-semibold">+55</span>
         </div>
         <input
           id={n('telefone')}
@@ -72,26 +67,43 @@ export function LeadForm({ onSubmit, submitLabel = 'Quero participar do Evento E
           required
           pattern={TELEFONE_PATTERN}
           title="Use o formato (00) 00000-0000 ou (00) 0000-0000"
-          placeholder="WhatsApp com DDD - Ex: (11) 98765-1234"
-          className="flex-1 min-w-0 px-3 py-3 text-sm bg-transparent text-white placeholder:text-muted focus:outline-none"
+          placeholder="WhatsApp com DDD"
+          className="flex-1 min-w-0 px-4 py-3.5 text-sm bg-transparent text-white placeholder:text-muted/60 focus:outline-none"
         />
       </div>
+
       {status === 'success' && (
-        <p className="text-sm text-green-400" role="alert">
-          Enviado com sucesso! Em breve entraremos em contato.
+        <p className="text-sm text-green-400 font-medium" role="alert">
+          Cadastro confirmado. Em breve entraremos em contato.
         </p>
       )}
       {status === 'error' && (
-        <p className="text-sm text-red-400" role="alert">
+        <p className="text-sm text-red-400 font-medium" role="alert">
           {errorMessage}
         </p>
       )}
+
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="w-full inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-background bg-gold hover:bg-gold-light transition-all duration-200 rounded-full shadow-lg shadow-black/20 hover:shadow-gold/30 uppercase tracking-wider disabled:opacity-70 disabled:cursor-not-allowed"
+        className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 text-sm font-bold text-background bg-gold hover:bg-gold-light active:scale-[0.98] transition-all duration-200 rounded-xl shadow-[0_4px_24px_rgba(201,152,26,0.3)] hover:shadow-[0_4px_32px_rgba(201,152,26,0.45)] uppercase tracking-wider disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === 'loading' ? 'Enviando...' : submitLabel}
+        {status === 'loading' ? (
+          <>
+            <svg className="animate-spin w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+            </svg>
+            Enviando...
+          </>
+        ) : (
+          <>
+            {submitLabel}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0">
+              <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+            </svg>
+          </>
+        )}
       </button>
     </form>
   )
