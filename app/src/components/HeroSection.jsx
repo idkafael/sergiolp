@@ -22,7 +22,7 @@ export function HeroSection({ onSubmit }) {
           <img
             alt="Sérgio Lima"
             className="object-cover object-[65%_top] w-full h-full"
-            src="https://sergiolima-lp.vercel.app/images/sergio-lima-hero.png"
+            src="https://i.imgur.com/DxwyvSw.jpeg"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/55 via-40% to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent via-15% to-transparent" />
@@ -68,7 +68,6 @@ export function HeroSection({ onSubmit }) {
 
               {/* Event badge — technical label */}
               <div className="mb-7">
-                <TechLabel className="mb-4 block w-fit">Evento · ao vivo · gratuito</TechLabel>
                 <div className="inline-block">
                   <h2 className="text-3xl md:text-4xl font-extrabold tracking-wider">
                     <span className="text-white">ESQUADRIA</span>{' '}
@@ -112,9 +111,6 @@ export function HeroSection({ onSubmit }) {
                     submitLabel="Participar gratuitamente"
                   />
                 </div>
-                <p className="text-muted/50 text-[10px] uppercase tracking-[0.2em] font-mono">
-                  Esquadria Milionária · Vagas limitadas
-                </p>
               </div>
 
             </div>
@@ -133,7 +129,7 @@ export function HeroSection({ onSubmit }) {
           <img
             alt="Sérgio Lima"
             className="object-cover object-top w-full h-full"
-            src="https://sergiolima-lp.vercel.app/images/sergio-lima-hero-mobile.png"
+            src="https://i.imgur.com/DxwyvSw.jpeg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent via-20% to-transparent" />
         </div>
@@ -141,7 +137,6 @@ export function HeroSection({ onSubmit }) {
         <div className="relative z-10 px-4 pb-12 -mt-8">
           <AnimatedCard className="bg-background/80 backdrop-blur-md p-6 sm:p-8" innerBg="bg-background/90">
             <div className="text-center">
-              <TechLabel className="mb-4 mx-auto block w-fit">Evento · ao vivo · gratuito</TechLabel>
               <div className="mb-6 inline-block">
                 <h2 className="text-2xl sm:text-3xl font-extrabold tracking-wider">
                   <span className="text-white">ESQUADRIA</span>{' '}
@@ -162,9 +157,6 @@ export function HeroSection({ onSubmit }) {
                     submitLabel="Participar gratuitamente"
                   />
                 </div>
-                <p className="text-muted/50 text-[10px] uppercase tracking-[0.2em] font-mono">
-                  Evento Online e Gratuito · Vagas Limitadas
-                </p>
               </div>
             </div>
           </AnimatedCard>

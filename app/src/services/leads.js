@@ -1,4 +1,5 @@
 import { supabase } from '../lib/supabase'
+import { trackLead } from './meta'
 
 const TABLE_LEADS = 'leads'
 
@@ -24,6 +25,9 @@ export async function submitLead(data) {
   if (error) {
     return { ok: false, error: error.message }
   }
+
+  // Dispara evento Lead no Meta Pixel + Conversions API (sem await para não atrasar o UX)
+  trackLead({ email, telefone }).catch(() => {})
 
   return { ok: true }
 }
