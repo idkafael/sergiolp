@@ -10,8 +10,8 @@ async function sha256(str) {
     .join('')
 }
 
-function generateEventId() {
-  return `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`
+function generateEventId(prefix = 'evt') {
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2)}`
 }
 
 function getCookie(name) {
@@ -20,21 +20,50 @@ function getCookie(name) {
 }
 
 /**
- * Dispara evento Lead no browser pixel e na Conversions API (server-side).
+ * Envia um ou mais eventos para a Conversions API da Meta.
+ * @param {Array<{ event_name: string, event_id: string, user_data: object }>} events
+ */
+async function sendToCAPI(events) {
+  if (!ACCESS_TOKEN) return
+
+  const eventTime = Math.floor(Date.now() / 1000)
+
+  const payload = {
+    data: events.map((ev) => ({
+      event_name: ev.event_name,
+      event_time: eventTime,
+      event_id: ev.event_id,
+      action_source: 'website',
+      event_source_url: window.location.href,
+      user_data: ev.user_data,
+    })),
+  }
+
+  await fetch(
+    `https://graph.facebook.com/${API_VERSION}/${PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    }
+  )
+}
+
+/**
+ * Dispara eventos Lead + CompleteRegistration no browser pixel e na Conversions API.
  * @param {{ email: string, telefone: string }} data
  */
 export async function trackLead({ email, telefone } = {}) {
-  const eventId = generateEventId()
-  const eventTime = Math.floor(Date.now() / 1000)
+  const leadEventId = generateEventId('lead')
+  const regEventId  = generateEventId('reg')
 
-  // 1. Browser pixel — usa o mesmo eventID para deduplicação
+  // 1. Browser pixel — IDs distintos para cada evento, permitindo deduplicação
   if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
-    window.fbq('track', 'Lead', {}, { eventID: eventId })
+    window.fbq('track', 'Lead',                {}, { eventID: leadEventId })
+    window.fbq('track', 'CompleteRegistration', {}, { eventID: regEventId  })
   }
 
-  // 2. Conversions API — só envia se o token estiver configurado
-  if (!ACCESS_TOKEN) return
-
+  // 2. Conversions API — envia os dois eventos numa única requisição
   try {
     const emailHash = email ? await sha256(email) : null
 
@@ -42,33 +71,18 @@ export async function trackLead({ email, telefone } = {}) {
     const digits = telefone ? telefone.replace(/\D/g, '') : null
     const phoneHash = digits ? await sha256(`55${digits}`) : null
 
-    const payload = {
-      data: [
-        {
-          event_name: 'Lead',
-          event_time: eventTime,
-          event_id: eventId,
-          action_source: 'website',
-          event_source_url: window.location.href,
-          user_data: {
-            em: emailHash ? [emailHash] : [],
-            ph: phoneHash ? [phoneHash] : [],
-            client_user_agent: navigator.userAgent,
-            fbp: getCookie('_fbp') || null,
-            fbc: getCookie('_fbc') || null,
-          },
-        },
-      ],
+    const userData = {
+      em: emailHash ? [emailHash] : [],
+      ph: phoneHash ? [phoneHash] : [],
+      client_user_agent: navigator.userAgent,
+      fbp: getCookie('_fbp') || null,
+      fbc: getCookie('_fbc') || null,
     }
 
-    await fetch(
-      `https://graph.facebook.com/${API_VERSION}/${PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      }
-    )
+    await sendToCAPI([
+      { event_name: 'Lead',                event_id: leadEventId, user_data: userData },
+      { event_name: 'CompleteRegistration', event_id: regEventId,  user_data: userData },
+    ])
   } catch (err) {
     // Não bloqueia o fluxo do usuário em caso de falha
     console.error('[Meta CAPI]', err)
