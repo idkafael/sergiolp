@@ -2,8 +2,8 @@
 // Body: { secret, ids[], source, action, value }
 // actions: set_stage | set_starred | set_archived | set_follow_up | delete
 
-const SUPABASE_URL = process.env.SUPABASE_URL
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY
+const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY || process.env.VITE_SUPABASE_ANON_KEY
 const CRM_SECRET   = process.env.CRM_SECRET
 
 const TABLES = {

@@ -1,8 +1,8 @@
 // GET /api/get-leads?source=organic|ads
 // Header: x-secret: <CRM_SECRET>
 
-const SUPABASE_URL = process.env.SUPABASE_URL
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY
+const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY || process.env.VITE_SUPABASE_ANON_KEY
 const CRM_SECRET   = process.env.CRM_SECRET
 
 // Mapeamento source → tabela Supabase
