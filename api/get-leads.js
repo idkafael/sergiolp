@@ -54,6 +54,10 @@ module.exports = async (req, res) => {
     return res.status(200).json({ rows })
   } catch (err) {
     console.error('[get-leads]', err.message)
+    // Tabela ainda não existe → retorna vazio em vez de travar o CRM
+    if (err.message.includes('schema cache') || err.message.includes('does not exist')) {
+      return res.status(200).json({ rows: [] })
+    }
     return res.status(500).json({ error: err.message })
   }
 }
