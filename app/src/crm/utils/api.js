@@ -4,12 +4,24 @@ function headers(secret) {
   return { 'Content-Type': 'application/json', 'x-secret': secret }
 }
 
+async function parseJSON(res, label) {
+  const contentType = res.headers.get('content-type') || ''
+  if (!contentType.includes('application/json')) {
+    throw new Error(
+      `${label}: servidor retornou ${res.status} (não-JSON). ` +
+      `Verifique se as rotas /api/* existem no Vercel.`
+    )
+  }
+  const data = await res.json()
+  if (!res.ok) throw new Error(`${label}: ${data?.error || `HTTP ${res.status}`}`)
+  return data
+}
+
 export async function getLeads(secret, source) {
   const res = await fetch(`/api/get-leads?source=${source}`, {
     headers: { 'x-secret': secret },
   })
-  if (!res.ok) throw new Error(`get-leads ${source}: HTTP ${res.status}`)
-  return res.json() // { rows: Lead[] }
+  return parseJSON(res, `get-leads/${source}`)
 }
 
 export async function updateLead(secret, { id, source, field, value }) {
@@ -18,8 +30,7 @@ export async function updateLead(secret, { id, source, field, value }) {
     headers: headers(secret),
     body: JSON.stringify({ secret, id, source, field, value }),
   })
-  if (!res.ok) throw new Error(`update-lead: HTTP ${res.status}`)
-  return res.json()
+  return parseJSON(res, 'update-lead')
 }
 
 export async function bulkAction(secret, { ids, source, action, value }) {
@@ -28,6 +39,5 @@ export async function bulkAction(secret, { ids, source, action, value }) {
     headers: headers(secret),
     body: JSON.stringify({ secret, ids, source, action, value }),
   })
-  if (!res.ok) throw new Error(`bulk-action: HTTP ${res.status}`)
-  return res.json()
+  return parseJSON(res, 'bulk-action')
 }
